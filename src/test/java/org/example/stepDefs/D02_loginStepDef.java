@@ -65,6 +65,4 @@ public class D02_loginStepDef {
         softAssert.assertAll();
 
     }
-
-
 }

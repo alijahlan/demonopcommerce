@@ -34,4 +34,28 @@ public WebElement getLoginFailMsg(){
     return Hooks.driver.findElement(By.xpath("//div[@class='message-error validation-summary-errors']"));
 }
 
+
+// for reset password
+
+    public WebElement resetPasswordLink(){
+        return Hooks.driver.findElement(By.xpath("//span[@class='forgot-password']//a"));
+    }
+
+    public WebElement emailField(){
+        return Hooks.driver.findElement(By.id("Email"));
+    }
+
+    public WebElement recoverBtn(){
+        return Hooks.driver.findElement(By.name("send-email"));
+    }
+
+    public WebElement getColorResetSuccess(){
+        return Hooks.driver.findElement(By.xpath("//div[@id='bar-notification']//div[@class='bar-notification success']"));
+    }
+
+    public WebElement getResetSuccess(){
+        return Hooks.driver.findElement(By.xpath("//div[@id='bar-notification']//p[@class='content']"));
+    }
+
+
 }
