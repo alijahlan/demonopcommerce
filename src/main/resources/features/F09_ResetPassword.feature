@@ -1,5 +1,5 @@
 @smoke
-  Feature: F05_ResetPassword | User could reset password
+  Feature: F09_ResetPassword | User could reset password
     Scenario: User could reset his/her password successfully
       Given user click on login button
       When user click on Forgot password link

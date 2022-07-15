@@ -8,7 +8,7 @@ import org.example.pages.P02_login;
 import org.openqa.selenium.support.Color;
 import org.testng.asserts.SoftAssert;
 
-public class D05_resetPassword {
+public class D09_resetPassword {
     P02_login login = new P02_login();
     SoftAssert softAssert = new SoftAssert();
 
