@@ -85,5 +85,16 @@ public class P03_homePage {
         return node.findElements(By.xpath("./descendant-or-self::*")).size() > 2;
     }
 
+
+//    Home page slider
+
+    public List<WebElement> getSliders(){
+        return Hooks.driver.findElements(By.xpath("//div[@id='nivo-slider']/a"));
+    }
+
+    public WebElement sliderControl(){
+        return Hooks.driver.findElement(By.xpath("//div[@class='nivo-controlNav']//a[@rel='1']"));
+    }
+
 }
 
