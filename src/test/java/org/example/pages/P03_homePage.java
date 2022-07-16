@@ -96,5 +96,20 @@ public class P03_homePage {
         return Hooks.driver.findElement(By.xpath("//div[@class='nivo-controlNav']//a[@rel='1']"));
     }
 
+
+//    followUs Feature
+
+    public WebElement getFacebookBtn(){
+        return Hooks.driver.findElement(By.xpath("//li[@class=\"facebook\"]//a"));
+    }
+    public WebElement getTwitterBtn(){
+        return Hooks.driver.findElement(By.xpath("//li[@class=\"twitter\"]//a"));
+    }
+    public WebElement getRSSBtn(){
+        return Hooks.driver.findElement(By.xpath("//li[@class=\"rss\"]//a"));
+    }
+    public WebElement getYoutubeBtn(){
+        return Hooks.driver.findElement(By.xpath("//li[@class=\"youtube\"]//a"));
+    }
 }
 
