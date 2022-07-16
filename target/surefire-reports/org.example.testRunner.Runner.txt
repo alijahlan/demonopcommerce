@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: org.example.testRunner.Runner
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 207.249 s <<< FAILURE! - in org.example.testRunner.Runner
+org.example.testRunner.Runner.runScenario["verify if the first slider link is exist", "F06_homeSliders | check if the home slider is work as expected"](12)  Time elapsed: 7.98 s  <<< FAILURE!
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_if_the_redirect_link_is(D06_homeSlidersStepDef.java:29)
+	at ✽.verify if the redirect link is "https://demo.nopcommerce.com/nokia-lumia-1020"(file:///D:/clipse-workspaces/intellij/automation_projects/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:5)
+
+org.example.testRunner.Runner.runScenario["verify if the second slider link is exist", "F06_homeSliders | check if the home slider is work as expected"](13)  Time elapsed: 9.067 s  <<< FAILURE!
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefs.D06_homeSlidersStepDef.verify_if_the_redirect_link_is(D06_homeSlidersStepDef.java:29)
+	at ✽.verify if the redirect link is "https://demo.nopcommerce.com/iphone-6"(file:///D:/clipse-workspaces/intellij/automation_projects/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:9)
+
+org.example.testRunner.Runner.runScenario["user opens rss link", "F07_followUs | User open social media links"](16)  Time elapsed: 8.741 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.stepDefs.D07_followUsStepDef.verify_new_tab_link(D07_followUsStepDef.java:44)
+	at ✽.verify new tab link "https://demo.nopcommerce.com/new-online-store-is-open"(file:///D:/clipse-workspaces/intellij/automation_projects/demonopcommerce/src/main/resources/features/F07_followUs.feature:16)
+
