@@ -42,7 +42,7 @@ public class P03_homePage {
 
 
     //    hover Categories Feature
-    public void categoriesMenu()  {
+    public void categoriesMenu() {
         Actions action = new Actions(Hooks.driver);
         //Thread.sleep(1000);
         List<WebElement> lis = Hooks.driver.findElements(By.xpath("//ul[@class='top-menu notmobile']/li"));
@@ -51,28 +51,27 @@ public class P03_homePage {
 
         WebElement mainLi = lis.get(mainItemIndex);
         action.moveToElement(mainLi).perform();
-         isHasChild = hasChildren(mainLi);
+        isHasChild = hasChildren(mainLi);
     }
 
-    public String getSubCategory(){
+    public String getSubCategory() {
 
         String subTitle;
-        if (isHasChild){
+        if (isHasChild) {
             isHasChild = false;
-        List<WebElement> as = Hooks.driver.findElements(By.xpath(String.format("//ul[@class='top-menu notmobile']/li[position()=%d]//ul//li", mainItemIndex + 1)));
-        //System.out.println(as.get((int) (Math.random() * as.size())).getText());
+            List<WebElement> as = Hooks.driver.findElements(By.xpath(String.format("//ul[@class='top-menu notmobile']/li[position()=%d]//ul//li", mainItemIndex + 1)));
+            //System.out.println(as.get((int) (Math.random() * as.size())).getText());
 
-        int subCategoryIndex = (int) (Math.random() * as.size());
-        subTitle = as.get(subCategoryIndex).getText();
-        as.get(subCategoryIndex).click();
-        }
-        else{
+            int subCategoryIndex = (int) (Math.random() * as.size());
+            subTitle = as.get(subCategoryIndex).getText();
+            as.get(subCategoryIndex).click();
+        } else {
             WebElement catNoChild = Hooks.driver.findElement(By.xpath(String.format("//ul[@class='top-menu notmobile']/li[position()=%d]//a", mainItemIndex + 1)));
             subTitle = catNoChild.getText();
             catNoChild.click();
         }
 
-        return  subTitle;
+        return subTitle;
     }
 
     public WebElement getPageTitle() {
@@ -88,28 +87,54 @@ public class P03_homePage {
 
 //    Home page slider
 
-    public List<WebElement> getSliders(){
+    public List<WebElement> getSliders() {
         return Hooks.driver.findElements(By.xpath("//div[@id='nivo-slider']/a"));
     }
 
-    public WebElement sliderControl(){
+    public WebElement sliderControl() {
         return Hooks.driver.findElement(By.xpath("//div[@class='nivo-controlNav']//a[@rel='1']"));
     }
 
 
 //    followUs Feature
 
-    public WebElement getFacebookBtn(){
+    public WebElement getFacebookBtn() {
         return Hooks.driver.findElement(By.xpath("//li[@class=\"facebook\"]//a"));
     }
-    public WebElement getTwitterBtn(){
+
+    public WebElement getTwitterBtn() {
         return Hooks.driver.findElement(By.xpath("//li[@class=\"twitter\"]//a"));
     }
-    public WebElement getRSSBtn(){
+
+    public WebElement getRSSBtn() {
         return Hooks.driver.findElement(By.xpath("//li[@class=\"rss\"]//a"));
     }
-    public WebElement getYoutubeBtn(){
+
+    public WebElement getYoutubeBtn() {
         return Hooks.driver.findElement(By.xpath("//li[@class=\"youtube\"]//a"));
     }
-}
 
+//    Wishlist Feature
+
+    public WebElement getHeartBtn() {
+        return Hooks.driver.findElement(By.xpath("//div[@data-productid='18']//button[@title='Add to wishlist']"));
+    }
+
+    public WebElement getSuccessMsg() {
+        return Hooks.driver.findElement(By.xpath("//p[@class='content']"));
+    }
+
+    public WebElement getSuccessMsgParent() {
+        return Hooks.driver.findElement(By.xpath("//div[@class='bar-notification success']"));
+    }
+
+
+    public WebElement getSuccessX() {
+        return Hooks.driver.findElement(By.xpath("//span[@class='close']"));
+    }
+
+    public WebElement getWishlistQty(){
+        return Hooks.driver.findElement(By.xpath("//span[@class='wishlist-qty']"));
+    }
+
+}
